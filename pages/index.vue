@@ -11,7 +11,7 @@ import styled from 'vue-styled-components'
 const Title = styled.h1`
   font-weight: 400;
   font-size: 24px;
-`;
+`
 
 export default {
   components: {
