@@ -16,7 +16,9 @@ module.exports = {
     'vue'
   ],
   rules: {
-    "semi": false,
-    "singleQuote": true
+    "semi": [2, "never"],
+    "no-console": "off",
+    "vue/max-attributes-per-line": "off",
+    "prettier/prettier": ["error", { 'singleQuote': true, "semi": false }]
   }
 }
