@@ -1,8 +1,8 @@
 <template>
   <form
-    class="login-form"
+    class="form"
     novalidate>
-    <div class="form-item">
+    <div>
       <label
         class="form-label"
         for="email">メールアドレス</label>
@@ -19,7 +19,7 @@
         <li v-if="!validation.email.required">メールアドレスが入力されていません。</li>
       </ul>
     </div>
-    <div class="form-item">
+    <div>
       <label
         class="form-label"
         for="passowrd">パスワード</label>
@@ -110,7 +110,7 @@ export default {
       if (this.disableLoginAction) return
 
       this.progress = true
-      this.error = ''
+      this.resetError()
 
       this.$nextTick(() => {
         this.onLogin({ email: this.email, password: this.password })
@@ -127,7 +127,7 @@ export default {
 </script>
 
 <style scoped>
-.login-form {
+.form {
   display: block;
   margin: 0 auto;
   text-align: left;
