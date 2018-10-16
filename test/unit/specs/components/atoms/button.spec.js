@@ -8,7 +8,6 @@ describe('Button', () => {
         it('buttonクラスを持つbutton要素で構成されること1', () => {
           const button = mount(Button)
           expect(button.is('button')).to.equal(true)
-          console.log('test', button.is('button'))
           expect(button.classes()).to.include('button')
         })
       })
