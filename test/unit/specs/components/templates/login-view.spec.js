@@ -4,7 +4,6 @@ import LoginView from '@/components/templates/login-view.vue'
 
 // ローカルなVueコンストラクタを作成
 const localVue = createLocalVue()
-
 // ローカルなVueコンストラクタにVuexをインストール
 localVue.use(Vuex)
 
@@ -35,8 +34,9 @@ describe('LoginView', () => {
 
     // loginアクションの動作確認のためのVuex周りの設定
     actions = {
-      login: sinon.stub() // loginアクションのモック
+      login: sinon.stub()
     }
+
     store = new Vuex.Store({
       state: {},
       actions
@@ -52,7 +52,7 @@ describe('LoginView', () => {
             $router
           },
           stubs: {
-            'login-form': LoginFormComponentStub
+            LoginForm: LoginFormComponentStub
           },
           store,
           localVue
@@ -78,7 +78,7 @@ describe('LoginView', () => {
       beforeEach(() => {
         loginView = mount(LoginView, {
           stubs: {
-            'login-form': LoginFormComponentStub
+            LoginForm: LoginFormComponentStub
           },
           store,
           localVue
